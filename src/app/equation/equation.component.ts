@@ -20,6 +20,9 @@ export class EquationComponent implements OnInit {
   get b() { return this.mathForm.value.b; }
 
   ngOnInit(): void {
+    this.mathForm.statusChanges.subscribe((value) => {
+      console.log(value);
+    });
   }
 
   randomNumber() {
